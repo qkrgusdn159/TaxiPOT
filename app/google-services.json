@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "151559963159",
+    "firebase_url": "https://taxiserver-db7f6.firebaseio.com",
+    "project_id": "taxiserver-db7f6",
+    "storage_bucket": "taxiserver-db7f6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:151559963159:android:33fd20fcbc576e96",
+        "android_client_info": {
+          "package_name": "com.example.david.taxipot"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "151559963159-a2je210vijbrb9cq9dh1evief0pjd6kk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.david.taxipot",
+            "certificate_hash": "cfa8e4c5f25658aa877ccd6a3d90f342ef54c516"
+          }
+        },
+        {
+          "client_id": "151559963159-e900780tqttdmldp9evgv33cm76ltrbm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.david.taxipot",
+            "certificate_hash": "7e905fb7feb44205d84f67748b72e0e7e48c32b3"
+          }
+        },
+        {
+          "client_id": "151559963159-jliug7hb31f4bdarrmprgeiptu6ejo2a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDA5Q_VuWihyIXt5tC2hHnFOyXSVS2pSms"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "151559963159-jliug7hb31f4bdarrmprgeiptu6ejo2a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
