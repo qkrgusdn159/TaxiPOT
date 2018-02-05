@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:orientation="vertical"
+    android:weightSum="2">
+
+
+    <TextView
+        android:id="@+id/group_title"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:text="천안역에서 아산캠 가실분" />
+
+    <TextView
+        android:id="@+id/expiration_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/group_title"
+        android:layout_alignBottom="@+id/group_title"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="11dp"
+        android:text="18/02/04" />
+
+    <TextView
+        android:id="@+id/boarding_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/expiration_date"
+        android:layout_below="@+id/expiration_date"
+        android:text="21:30" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/group_title"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="28dp"
+        app:srcCompat="@drawable/ic_swap_vert_black_24dp" />
+
+    <TextView
+        android:id="@+id/source"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/boarding_time"
+        android:layout_marginStart="21dp"
+        android:layout_toEndOf="@+id/imageView6"
+        android:text="출발지" />
+
+    <TextView
+        android:id="@+id/destination"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/source"
+        android:layout_below="@+id/imageView6"
+        android:layout_alignStart="@id/source"
+        android:text="도착지" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/destination"
+        android:layout_toStartOf="@+id/boarding_time"
+        android:text="탑승인원" />
+
+    <TextView
+        android:id="@+id/pax"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/boarding_time"
+        android:layout_alignTop="@+id/textView15"
+        android:text="3/4" />
+
+</RelativeLayout>
