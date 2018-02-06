@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
+
     <item
-        android:id="@+id/menu_bottom_recent"
-        android:icon="@drawable/ic_recent_actors_white_24dp"
-        android:title="최근"/>
+        android:id="@+id/menu_bottom_find"
+        android:icon="@drawable/ic_find_in_page_white_24dp"
+        android:title="찾기"/>
     <item
         android:id="@+id/menu_bottom_friends"
         android:icon="@drawable/ic_people_white_24dp"
@@ -13,4 +14,5 @@
         android:id="@+id/menu_bottom_chat"
         android:icon="@drawable/ic_chat_white_24dp"
         android:title="팟톡"/>
+
 </menu>

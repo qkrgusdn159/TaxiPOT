@@ -7,4 +7,6 @@ package com.example.david.taxipot.model;
 public class UserModel {
     public String userName;
     public String profileImageUrl;
+    public String currentGroupId;
+
 }

@@ -12,25 +12,65 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import com.example.david.taxipot.fragment.FindGroupFragment;
+import com.example.david.taxipot.model.GroupModel;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    public TextView Title;
+    public TextView Destination;
+    public TextView StartingPoint;
+    public TextView BoardingTime;
+    public TextView Pax;
+    public TextView ExpirationDate;
+    private DatabaseReference mDatabase;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        getFragmentManager().beginTransaction().replace(R.id.MainActivity_framelayout,new FindGroupFragment()).commit();
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        /*Title = findViewById(R.id.group_title);
+        Destination = findViewById(R.id.destination);
+        StartingPoint = findViewById(R.id.starting_point);
+        BoardingTime = findViewById(R.id.boarding_time);
+        Pax = findViewById(R.id.pax);
+        ExpirationDate = findViewById(R.id.expiration_date);
+
+        GroupModel groupModel = new GroupModel();
+        groupModel.boardingTime = BoardingTime.getText().toString();
+        groupModel.destination = Destination.getText().toString();
+        groupModel.expirationDate = ExpirationDate.getText().toString();
+        groupModel.groupTitle = Title.getText().toString();
+        groupModel.pax = Pax.getText().toString();
+        groupModel.startingPoint = StartingPoint.getText().toString();
+
+
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        String uid = user.getUid().toString();
+        mDatabase = FirebaseDatabase.getInstance().getReference();
+        mDatabase.child("TaxiGroups").child(uid).setValue(groupModel);*/
+
+        /*FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
-        });
+        });*/ //floating 버튼
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -91,6 +131,7 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_share) {
 
         } else if (id == R.id.nav_send) {
+            Toast.makeText(this, "그룹테이블 생성", Toast.LENGTH_SHORT).show();
 
         }
 
