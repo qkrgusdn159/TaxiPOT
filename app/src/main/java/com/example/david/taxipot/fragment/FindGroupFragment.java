@@ -77,6 +77,15 @@ public class FindGroupFragment extends Fragment{
         @Override
         public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
 
+            // 텍스트뷰에 서버에서 받아온값을 입력시킴
+
+            ((CustomViewHolder)holder).Title.setText(groupModel.get(position).groupTitle);
+            ((CustomViewHolder)holder).Destination.setText(groupModel.get(position).destination);
+            ((CustomViewHolder)holder).StartingPoint.setText(groupModel.get(position).startingPoint);
+            ((CustomViewHolder)holder).BoardingTime.setText(groupModel.get(position).boardingTime);
+            ((CustomViewHolder)holder).Pax.setText(groupModel.get(position).pax);
+            ((CustomViewHolder)holder).ExpirationDate.setText(groupModel.get(position).expirationDate);
+
         }
 
         @Override
@@ -102,6 +111,10 @@ public class FindGroupFragment extends Fragment{
                 BoardingTime = view.findViewById(R.id.boarding_time);
                 Pax = view.findViewById(R.id.pax);
                 ExpirationDate = view.findViewById(R.id.expiration_date);
+
+
+
+
             }
         }
     }

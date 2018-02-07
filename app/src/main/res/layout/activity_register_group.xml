@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context="com.example.david.taxipot.RegisterGroupActivity">
+
+    <EditText
+        android:id="@+id/registergroup_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="방제목" />
+
+    <EditText
+        android:id="@+id/registergroup_startingpoint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="출발지" />
+
+    <EditText
+        android:id="@+id/registergroup_destination"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="도착지" />
+
+    <EditText
+        android:id="@+id/registergroup_expirationdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="탑승일자" />
+
+    <EditText
+        android:id="@+id/registergroup_pax"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="탑승인원" />
+
+    <EditText
+        android:id="@+id/registergroup_boardingtime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="탑승시간" />
+
+    <Button
+        android:id="@+id/register_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="그룹생성" />
+
+
+</LinearLayout>
