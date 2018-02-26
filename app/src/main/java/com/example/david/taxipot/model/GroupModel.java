@@ -5,12 +5,13 @@ package com.example.david.taxipot.model;
  */
 
 public class GroupModel {
+
     public String groupTitle;
     public String expirationDate;
     public String boardingTime;
     public String startingPoint;
     public String destination;
     public String pax;
-
+    public String groupID;
 
 }

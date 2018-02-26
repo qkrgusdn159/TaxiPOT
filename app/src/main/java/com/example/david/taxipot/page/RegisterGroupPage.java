@@ -1,6 +1,6 @@
-package com.example.david.taxipot;
+package com.example.david.taxipot.page;
 
-import android.content.Intent;
+
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.example.david.taxipot.R;
 import com.example.david.taxipot.model.GroupModel;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -16,7 +17,7 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class RegisterGroupActivity extends AppCompatActivity {
+public class RegisterGroupPage extends AppCompatActivity {
 
     EditText r_title;
     EditText r_startingpoint;
@@ -67,6 +68,8 @@ public class RegisterGroupActivity extends AppCompatActivity {
 
                 FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
                 String uid = user.getUid().toString();
+
+                groupModel.groupID = uid;
                 mDatabase = FirebaseDatabase.getInstance().getReference();
                 mDatabase.child("TaxiGroups").child(uid).setValue(groupModel).addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override

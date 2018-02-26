@@ -1,6 +1,7 @@
 package com.example.david.taxipot.fragment;
 
 import android.app.Fragment;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.LinearLayoutManager;
@@ -13,6 +14,7 @@ import android.widget.TextView;
 import com.example.david.taxipot.R;
 import com.example.david.taxipot.model.GroupModel;
 
+import com.example.david.taxipot.page.GroupInfoPage;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.FirebaseDatabase;
@@ -75,7 +77,7 @@ public class FindGroupFragment extends Fragment{
         }
 
         @Override
-        public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
+        public void onBindViewHolder(RecyclerView.ViewHolder holder, final int position) {
 
             // 텍스트뷰에 서버에서 받아온값을 입력시킴
 
@@ -85,6 +87,15 @@ public class FindGroupFragment extends Fragment{
             ((CustomViewHolder)holder).BoardingTime.setText(groupModel.get(position).boardingTime);
             ((CustomViewHolder)holder).Pax.setText(groupModel.get(position).pax);
             ((CustomViewHolder)holder).ExpirationDate.setText(groupModel.get(position).expirationDate);
+
+            holder.itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(view.getContext(), GroupInfoPage.class);
+                    intent.putExtra("groupID",groupModel.get(position).groupID);
+                    startActivity(intent);
+                }
+            });
 
         }
 

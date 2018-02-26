@@ -22,7 +22,8 @@
             android:name=".MainActivity"
             android:label="@string/title_activity_main"
             android:theme="@style/AppTheme" />
-        <activity android:name=".RegisterGroupActivity"></activity>
+        <activity android:name=".page.RegisterGroupPage" />
+        <activity android:name=".page.GroupInfoPage"></activity>
     </application>
 
 </manifest>

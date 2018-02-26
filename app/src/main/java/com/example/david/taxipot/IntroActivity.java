@@ -13,6 +13,7 @@ import android.widget.LinearLayout;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.remoteconfig.FirebaseRemoteConfig;
 import com.google.firebase.remoteconfig.FirebaseRemoteConfigSettings;
 
@@ -22,11 +23,15 @@ public class IntroActivity extends AppCompatActivity { // 인트로 화면
     private FirebaseRemoteConfig mFirebaseRemoteConfig;
 
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_intro);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
+        //FirebaseDatabase.getInstance().setPersistenceEnabled(true);
 
         linearLayout = (LinearLayout)findViewById(R.id.IntroActivity_linearlayout);
 

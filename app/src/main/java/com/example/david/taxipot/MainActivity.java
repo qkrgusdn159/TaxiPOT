@@ -3,7 +3,6 @@ package com.example.david.taxipot;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -17,11 +16,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.david.taxipot.fragment.FindGroupFragment;
-import com.example.david.taxipot.model.GroupModel;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
+import com.example.david.taxipot.page.RegisterGroupPage;
 import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -43,32 +39,11 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        /*Title = findViewById(R.id.group_title);
-        Destination = findViewById(R.id.destination);
-        StartingPoint = findViewById(R.id.starting_point);
-        BoardingTime = findViewById(R.id.boarding_time);
-        Pax = findViewById(R.id.pax);
-        ExpirationDate = findViewById(R.id.expiration_date);
-
-        GroupModel groupModel = new GroupModel();
-        groupModel.boardingTime = BoardingTime.getText().toString();
-        groupModel.destination = Destination.getText().toString();
-        groupModel.expirationDate = ExpirationDate.getText().toString();
-        groupModel.groupTitle = Title.getText().toString();
-        groupModel.pax = Pax.getText().toString();
-        groupModel.startingPoint = StartingPoint.getText().toString();
-
-
-        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-        String uid = user.getUid().toString();
-        mDatabase = FirebaseDatabase.getInstance().getReference();
-        mDatabase.child("TaxiGroups").child(uid).setValue(groupModel);*/
-
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this,RegisterGroupActivity.class);
+                Intent intent = new Intent(MainActivity.this,RegisterGroupPage.class);
                 startActivity(intent);
             }
         }); //floating 버튼
